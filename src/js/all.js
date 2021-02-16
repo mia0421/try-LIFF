@@ -24,7 +24,7 @@ var liffInit = function () {
 
                 const idDecodedToken = liff.getDecodedIDToken();
                 console.log('getDecodedIDToken', idDecodedToken)
-                document.getElementById('idDecodedToken').textContent = idDecodedToken;
+                document.getElementById('idDecodedToken').textContent = JSON.stringify(idDecodedToken,null,2);
             }
 
 
@@ -36,7 +36,9 @@ var liffInit = function () {
             //後台的「Scopes」要設定開啟 profile, openid
             liff.getProfile().then(function (profile) {
                 console.log('getProfile', profile)
-                document.getElementById('profile').textContent = profile;
+                document.getElementById('profile').textContent = JSON.stringify(profile,null,2);
+                document.getElementById('lineImg').setAttribute('src',profile.pictureUrl);
+                document.getElementById('lineName').textContent = profile.displayName;
             });
 
         }
