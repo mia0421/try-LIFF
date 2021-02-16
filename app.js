@@ -8,18 +8,23 @@ var liffInit = function () {
 
             if (!liff.isLoggedIn()) {
                 console.log('你還沒登入Line哦！');
-                liff.login();
+                document.getElementById('isLogin').textContent = "你還沒登入Line哦";
+                //liff.login();
             } else {
                 console.log('你已經登入Line哦！');
+                document.getElementById('isLogin').textContent = "你已經登入Line哦";
 
                 const accessToken = liff.getAccessToken();
                 console.log('getAccessToken', accessToken);
+                document.getElementById('accessToken').textContent = accessToken;
 
                 const idToken = liff.getIDToken();
-                console.log('getIDToken', idToken) // print raw idToken object
+                console.log('getIDToken', idToken)
+                document.getElementById('idToken').textContent = idToken;
 
                 const idDecodedToken = liff.getDecodedIDToken();
-                console.log('getDecodedIDToken', idDecodedToken) // print decoded idToken object
+                console.log('getDecodedIDToken', idDecodedToken)
+                document.getElementById('idDecodedToken').textContent = idDecodedToken;
             }
 
 
@@ -30,7 +35,8 @@ var liffInit = function () {
             //取得使用者公開資料
             //後台的「Scopes」要設定開啟 profile, openid
             liff.getProfile().then(function (profile) {
-                console.log('getProfile', profile);
+                console.log('getProfile', profile)
+                document.getElementById('profile').textContent = profile;
             });
 
         }
