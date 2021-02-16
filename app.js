@@ -9,7 +9,7 @@ var liffInit = function () {
             if (!liff.isLoggedIn()) {
                 console.log('你還沒登入Line哦！');
                 document.getElementById('isLogin').textContent = "你還沒登入Line哦";
-                //liff.login();
+                liff.login();
             } else {
                 console.log('你已經登入Line哦！');
                 document.getElementById('isLogin').textContent = "你已經登入Line哦";
