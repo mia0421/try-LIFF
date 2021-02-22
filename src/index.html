@@ -9,8 +9,8 @@
 <body>
 <div class="content">
     <div class="info-block">
-    <img id="lineImg" />
-    <h4 id="lineName"></h4>
+        <img id="lineImg"/>
+        <h4 id="lineName"></h4>
     </div>
     <hr>
     <div class="block">
@@ -19,27 +19,36 @@
     </div>
     <div class="block">
         <b>accessToken</b>
-        <pre>說明:
-            login後取得
-            可用以呼叫 Social API(帶在Header，拿取個人資料)
-            這個Token只能在當前LIFF頁面應用，在你關閉此LIFF視窗的同時這個Token會立即被註銷(revoke)
-        </pre>
+        <div>
+            說明:
+            <ul>
+                <li>login後取得</li>
+                <li>可用以呼叫 Social API(帶在Header，拿取個人資料)</li>
+                <li>這個Token只能在當前LIFF頁面應用，在你關閉此LIFF視窗的同時這個Token會立即被註銷(revoke)</li>
+            </ul>
+        </div>
         <div class="token-block" id="accessToken"></div>
     </div>
 
     <div class="block">
         <b>idToken</b>
-        <pre>說明：
-            id_token本身是JWT，其中包含用戶資訊
-        </pre>
+        <div>
+            說明：
+            <ul>
+                <li>id_token本身是JWT，其中包含用戶資訊</li>
+            </ul>
+        </div>
         <div class="token-block" id="idToken"></div>
     </div>
 
     <div class="block">
         <b>idDecodedToken</b>
-        <pre>說明：
-            取得id_token的payload，其中包含用戶的暱稱、大頭貼URL和電子郵件地址。
-        </pre>
+        <div>
+            說明：
+            <ul>
+                <li>取得id_token的payload，其中包含用戶的暱稱、大頭貼URL和電子郵件地址。</li>
+            </ul>
+        </div>
         <pre id="idDecodedToken"></pre>
     </div>
     <div class="block">
@@ -48,11 +57,23 @@
     </div>
     <div class="block">
         <b>sendMessages</b>
-        <pre>可以讓User端發送訊息，像是回傳訂單編號等等</pre>
+        <div>
+            說明：
+            <ul>
+                <li>可以讓User端發送訊息，像是回傳訂單編號等等</li>
+            </ul>
+        </div>
     </div>
     <div class="block">
         <b>openWindow</b>
-        <pre>如果你有在 LIFF 中開啟其他網頁的需求，可以透過此函式完成</pre>
+        <div>
+            說明：
+            <ul>
+                <li>
+                    如果你有在 LIFF 中開啟其他網頁的需求，可以透過此函式完成
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 </body>
