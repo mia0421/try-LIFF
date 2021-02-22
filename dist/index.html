@@ -1,1 +1,16 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><title>Mia Test LIFF</title><script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script><script defer="defer" src="js/main.js"></script><link href="css/main.css" rel="stylesheet"></head><body><div class="content"><div class="info-block"><img id="lineImg"/><h4 id="lineName"></h4></div><hr><div class="block"><b>IsLogin</b><div class="token-block" id="isLogin"></div></div><div class="block"><b>accessToken</b><div class="token-block" id="accessToken"></div></div><div class="block"><b>idToken</b><div class="token-block" id="idToken"></div></div><div class="block"><b>idDecodedToken</b><pre id="idDecodedToken"></pre></div><div class="block"><b>profile</b><pre id="profile"></pre></div></div></body></html>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><title>Mia Test LIFF</title><script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script><script defer="defer" src="js/main.js"></script><link href="css/main.css" rel="stylesheet"></head><body><div class="content"><div class="info-block"><img id="lineImg"/><h4 id="lineName"></h4></div><hr><div class="block"><b>IsLogin</b><div class="token-block" id="isLogin"></div></div><div class="block"><b>accessToken</b><pre>說明:
+            login後取得
+            可用以呼叫 Social API(帶在Header，拿取個人資料)
+            這個Token只能在當前LIFF頁面應用，在你關閉此LIFF視窗的同時這個Token會立即被註銷(revoke)
+        </pre><div class="token-block" id="accessToken"></div></div><div class="block"><b>idToken</b><pre>
+            說明：
+            id_token本身是JWT，其中包含用戶資訊
+        </pre><div class="token-block" id="idToken"></div></div><div class="block"><b>idDecodedToken</b><pre>
+            說明：
+            取得id_token的payload，其中包含用戶的暱稱、大頭貼URL和電子郵件地址。
+        </pre><pre id="idDecodedToken"></pre></div><div class="block"><b>profile</b><pre id="profile"></pre></div><div class="block"><b>sendMessages</b><pre>
+            可以讓User端發送訊息，像是回傳訂單編號等等
+        </pre></div><div class="block"><b>openWindow</b><pre>
+            如果你有在 LIFF 中開啟其他網頁的需求，可以透過此函式完成
+
+        </pre></div></div></body></html>
